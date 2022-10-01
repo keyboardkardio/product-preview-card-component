@@ -108,8 +108,13 @@ button {
 	background-color: var(--dark-cyan);
 	border-radius: 0.5rem;
 	color: var(--white);
+	cursor: pointer;
 	font-weight: 600;
 	padding: 1rem 4rem;
+}
+
+button:hover {
+	background-color: hsl(159, 42%, 13%)
 }
 
 .icon {
