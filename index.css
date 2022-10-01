@@ -1,0 +1,151 @@
+/* CSS RESET */
+* {
+	border: 0 none;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+/* CUSTOM PROPERTIES */
+:root {
+	--cream: hsl(30, 38%, 92%);
+	--dark-blue: hsl(212, 21%, 14%);
+	--dark-cyan: hsl(158, 35%, 37%);
+	--gray-blue: hsl(228, 12%, 48%);
+	--white: hsl(0, 0%, 100%);
+}
+
+html {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	width: 100%;
+}
+
+body {
+	background-color: var(--cream);
+	color: var(--gray-blue);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+.card {
+	background-color: var(--white);
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	max-width: 37.5rem;
+}
+
+.card-media {
+	width: 65%;
+}
+
+.product-image-desktop {
+	border-radius: 0.5rem 0 0 0.5rem;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.product-image-mobile {
+	display: none;
+}
+
+.card-content {
+	padding: 2rem;
+	width: 50%;
+}
+
+.product-category {
+	font-size: 0.75rem;
+	letter-spacing: 0.3rem;
+	padding-bottom: 1rem;
+	text-transform: uppercase;
+}
+
+.font-display {
+	color: var(--dark-blue);
+	font-family: 'Fraunces';
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 2rem;
+}
+
+.product-name,
+.product-details {
+	padding-bottom: 1rem;
+}
+
+.product-description {
+	line-height: 1.5rem;
+	padding-bottom: 2rem;
+}
+
+.product-price {
+	align-items: center;
+	display: flex;
+	margin-top: 1rem;
+}
+
+.price-sale {
+	color: var(--dark-cyan);
+	margin-right: 1rem;
+}
+
+.price-original {
+	text-decoration: line-through;
+}
+
+button {
+	background-color: var(--dark-cyan);
+	border-radius: 0.5rem;
+	color: var(--white);
+	font-weight: 600;
+	padding: 1rem 4rem;
+}
+
+.icon {
+	margin-right: 0.25rem;
+}
+
+@media only screen and (max-width: 500px) {
+	.container {
+		padding: 1rem;
+	}
+
+	.card {
+		flex-direction: column;
+	}
+
+	.product-image-desktop {
+		display: none;
+	}
+
+	.product-image-mobile {
+		border-radius: 0.5rem 0.5rem 0 0;
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+		object-fit: cover;
+	}
+
+	.card-media {
+		width: fit-content;
+	}
+
+	.card-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: fit-content;
+		padding: 1.5rem;
+	}
+}
